@@ -18,7 +18,7 @@ namespace SimpleCaching
         public async Task Invoke(HttpContext context)
         {
             var company = await cache.GetObjectAsync<CompanyInfo>("CurrentCompany");
-            await await context.Response.WriteAsync($"{company.Name}, {company.Email}");
+            await context.Response.WriteAsync($"{company.Name}, {company.Email}");
         }
     }
 }
